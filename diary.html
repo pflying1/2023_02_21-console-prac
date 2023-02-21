@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+    //아침에 집에서 하는일 
+     let start = {
+        at : "집",
+        order : ["설거지", "식사준비", "씻기", "식사하기", "청소", "옷입기", "버스타기"]
+     };
+     //버스에 타고 하는 행동
+     let inProgress = {
+        at : "버스",
+        number: ["105번", "211번", "212번", "3번"],
+        order : ["타고", "버스탈때 카드찍기", "서있기", "자리에 앉기", "버스내릴때 카드찍기"]
+     };
+     //학원에서 하는 일
+     let end = {
+        at : "학원",
+        order : ["출근찍기", "커피 타오기", "노트북 켜기", "notion 확인하기", "어제 저녁 스케줄 적기", "수업", "퇴근찍기"]
+     };
+     //저녁에 집에 가서 하는 일
+     let realend = {
+        at : "집",
+        order : ["설거지", "식사준비", "씻기", "옷입기", "식사하기", "청소", "운동하기", "오늘배운거 복습하기", "잠자기"]
+     };
+     //시간 설정
+     let time = {
+      hour : ["6시", "7시", "8시", "9시", "10시", "11시", "12시", "1시", "2시", "3시", "4시", "5시"],
+      minute : ["10분", "20분", "30분", "40분", "50분"]
+     };
+    
+     
+    //  let lifeCycle = [start, inProgress, end, realend, time];
+
+     console.log(start.at)
+     console.log(time.hour[1], "~", time.hour[1], time.minute[2], ":\n-", start.order[1], "\n-", start.order[3]  )
+     console.log(time.hour[1], time.minute[2], "~", time.hour[2], ":\n-", start.order[2], "\n-", start.order[5], "\n-", start.order[6]  )
+     console.log('')
+     console.log(inProgress.at)
+     console.log(time.hour[2], "~", time.hour[2], time.minute[3], ":\n-", inProgress.number[0] + inProgress.order[0], "\n-", inProgress.order[1], "\n-", inProgress.order[3], "\n-", inProgress.order[4])
+     console.log('')
+     console.log(end.at)
+     console.log(time.hour[2], time.minute[3], "~", "오후", time.hour[0], time.minute[0], ":",) 
+     /* for문으로 end의 order의 값을 모두 출력 */
+     for(let i = 0; i < end.order.length; i++){console.log("-", end.order[i]);}
+     console.log('')
+     console.log(inProgress.at)
+     console.log("오후", time.hour[0], time.minute[0], "~", time.hour[1], ":\n-", inProgress.number[0] + inProgress.order[0], "\n-", inProgress.order[1], "\n-", inProgress.order[3], "\n-", inProgress.order[4])
+     console.log('')
+     console.log(start.at)
+     console.log("오후", time.hour[1], "~", time.hour[6], ":" ) 
+     /* for문으로 realend의 order의 값을 모두 출력 */
+     for(let j = 0; j < realend.order.length; j++){ console.log("-", realend.order[j]);}
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"><!-- 한달 4주 버스비 -->
+    <div>
+      <div>월요일 버스비</div>
+      <p>2500</p>
+    </div>
+    <div>
+      <div>화요일 버스비</div>
+      <p>2500</p>
+    </div>
+    <div>
+      <div>수요일 버스비</div>
+      <p>2500</p>
+    </div>
+    <div>
+      <div>목요일 버스비</div>
+      <p>2500</p>
+    </div>
+    <div>
+      <div>금요일 버스비</div>
+      <p>2500</p>
+    </div>
+    <div>
+      <div>토요일 버스비</div>
+      <p>0</p>
+    </div>
+    <div>
+      <div>일요일 버스비</div>
+      <p>0</p>
+    </div>
+    <div></div>
+  </div>
+</body>
+<script>
+  /* 일주일동안 버스비 */
+  let a = [2500, 2500, 2500, 2500, 2500, 0, 0];
+  /* 변수를 0으로 초기화 함 이유 : 앞에 쓰레기값이 있을수 있기 때문에 */
+  let result = 0;
+  /* i<a.length a에 저장된 길이만큼, i++ 1씩 증가 */
+  for(i=0; i<a.length; i++){
+    result+= a[i]*4;/* x4한 이유 한달은 4주 */
+  }
+  console.log(result);
+
+</script>
+</html>
